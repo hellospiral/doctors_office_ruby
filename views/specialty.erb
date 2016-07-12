@@ -1,7 +1,7 @@
 <h1><%= @specialty.name() %></h1>
 <ul>
   <% @specialty.doctors().each() do |doctor| %>
-  <li><a href="/specialties/<%= @specialty.id() %>/doctor/<%= doctor.id() %>"><%= doctor.name() %></a></li>
+  <li><a href="/specialties/<%= @specialty.id() %>/doctor/<%= doctor.id() %>"><%= doctor.name() %></a> - <%= doctor.number_of_patients() %> patients</li>
   <% end %>
 </ul>
 

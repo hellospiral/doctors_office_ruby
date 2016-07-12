@@ -61,7 +61,9 @@ describe(Doctor) do
       test_doctor.save()
       test_patient = Patient.new({:name => "Buck Jones", :birth_date => '1980-03-21', :doctor_id => test_doctor.id(), :id => nil})
       test_patient.save()
-      expect(test_doctor.number_of_patients()).to(eq(1))
+      test_patient2 = Patient.new({:name => "Mike Smith", :birth_date => '1981-03-21', :doctor_id => test_doctor.id(), :id => nil})
+      test_patient2.save()
+      expect(test_doctor.number_of_patients()).to(eq(2))
     end
   end
 end
