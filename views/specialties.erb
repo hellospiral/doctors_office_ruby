@@ -1,5 +1,7 @@
 <ul>
   <% @specialties.each() do |specialty| %>
-    <li> <%= specialty.name() %> </li>
+    <li><a href="/specialties/<%=specialty.id()%>"><%= specialty.name() %></a></li>
   <% end %>
 </ul>
+
+<a href="/">Home</a>

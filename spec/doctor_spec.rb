@@ -54,4 +54,14 @@ describe(Doctor) do
       expect(Doctor.find(test_doctor.id())).to(eq(test_doctor))
     end
   end
+
+  describe('#number_of_patients') do
+    it('returns the number of patients assigned to a doctor') do
+      test_doctor = Doctor.new({:name => 'Bob Williams', :specialty_id => 1, :id => nil})
+      test_doctor.save()
+      test_patient = Patient.new({:name => "Buck Jones", :birth_date => '1980-03-21', :doctor_id => test_doctor.id(), :id => nil})
+      test_patient.save()
+      expect(test_doctor.number_of_patients()).to(eq(1))
+    end
+  end
 end

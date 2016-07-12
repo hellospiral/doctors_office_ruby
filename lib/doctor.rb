@@ -40,6 +40,11 @@ class Doctor
     doctors_patients
   end
 
+  define_method(:number_of_patients) do
+     returned_patients = DB.exec("SELECT COUNT(*) FROM patients WHERE doctor_id = #{self.id()};")
+     returned_patients.ntuples()
+  end
+
   define_singleton_method(:find) do |id|
     found_doctor = nil
     Doctor.all().each() do |doctor|

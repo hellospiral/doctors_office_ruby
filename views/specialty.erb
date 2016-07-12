@@ -1,0 +1,8 @@
+<h1><%= @specialty.name() %></h1>
+<ul>
+  <% @specialty.doctors().each() do |doctor| %>
+  <li><a href="/specialties/<%= @specialty.id() %>/doctor/<%= doctor.id() %>"><%= doctor.name() %></a></li>
+  <% end %>
+</ul>
+
+<a href="/specialties/<%= @specialty.id() %>/doctor/new">Add a Doctor</a>
