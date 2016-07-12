@@ -1,13 +1,17 @@
 <h1>Add A Patient for Dr. <%= @doctor.name() %></h1>
 
-<form action="/patients" method="post">
-  <input id="doctor_id" type="hidden" name="doctor_id" value="<%= @doctor.id() %>">
+<form action="/patients" method="post" class="well">
+  <div class="form-group">
+    <input id="doctor_id" type="hidden" name="doctor_id" value="<%= @doctor.id() %>">
 
-  <label for="name">Please Enter the Patient's Name:</label>
-  <input type="text" name="name" id="name">
+    <label for="name">Please Enter the Patient's Name:</label>
+    <input type="text" name="name" id="name" class="form-control">
+  </div>
 
-  <label for="birth_date">Please Enter the Patient's Birth Date:</label>
-  <input type="date" name="birth_date" id="birth_date">
+  <div class="form-group">
+    <label for="birth_date">Please Enter the Patient's Birth Date:</label>
+    <input type="date" name="birth_date" id="birth_date" class="form-control">
+  </div>
 
-  <button type="submit" name="button">Add Patient</button>
+  <button type="submit" name="button" class="btn btn-success">Add Patient</button>
 </form>

@@ -6,7 +6,7 @@ require("./lib/patient")
 require("./lib/specialty")
 require('pg')
 
-DB = PG.connect({:dbname => "doctors_office_test"})
+DB = PG.connect({:dbname => "doctors_office"})
 
 get('/') do
   erb(:index)

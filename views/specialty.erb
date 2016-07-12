@@ -1,8 +1,13 @@
-<h1><%= @specialty.name() %></h1>
-<ul>
+<h1 class="text-center"><%= @specialty.name() %></h1>
+<hr>
+<h3>Doctors</h3>
+<ul class="list-group well">
   <% @specialty.doctors().each() do |doctor| %>
-  <li><a href="/specialties/<%= @specialty.id() %>/doctor/<%= doctor.id() %>"><%= doctor.name() %></a> - <%= doctor.number_of_patients() %> patients</li>
+  <li class="list-group-item"><a href="/specialties/<%= @specialty.id() %>/doctor/<%= doctor.id() %>"><%= doctor.name() %></a> - <%= doctor.number_of_patients() %> patients</li>
   <% end %>
 </ul>
 
-<a href="/specialties/<%= @specialty.id() %>/doctor/new">Add a Doctor</a>
+<div class="btn-group" role="group">
+  <a href="/specialties/<%= @specialty.id() %>/doctor/new" class="btn btn-primary" role="button">Add a Doctor</a>
+  <a href="/specialties" class="btn btn-default" role="button">Back</a>
+</div>

@@ -1,7 +1,13 @@
-<ul>
+<h2>Hospital Departments</h2>
+<hr>
+
+<ul class="list-group">
   <% @specialties.each() do |specialty| %>
-    <li><a href="/specialties/<%=specialty.id()%>"><%= specialty.name() %></a></li>
+    <li class="list-group-item"><a href="/specialties/<%=specialty.id()%>"><%= specialty.name() %></a></li>
   <% end %>
 </ul>
 
-<a href="/">Home</a>
+<div class="btn-group" role="group">
+  <a href="/" class="btn btn-default" role="button">Home</a>
+  <a href="/specialty/new" class="btn btn-warning active" role="button">Add New Specialty</a>
+</div>
