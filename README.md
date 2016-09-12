@@ -10,7 +10,7 @@ a parcitular doctor.
 
 ## Goals
 
-This project was intended to practice writing relational database schemas from scratch and custom Sinatra routes.
+This project was intended to practice writing relational database schemas from scratch, custom Sinatra routes, and unit/integration tests with Rspec and Capybara.
 
 
 ## Setup/Installation Requirements
